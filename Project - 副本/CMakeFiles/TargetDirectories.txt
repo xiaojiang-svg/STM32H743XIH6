@@ -1,0 +1,3 @@
+/mnt/c/Users/lenovo/Desktop/STM32H743XIH6/Project/CMakeFiles/proc.dir
+/mnt/c/Users/lenovo/Desktop/STM32H743XIH6/Project/CMakeFiles/edit_cache.dir
+/mnt/c/Users/lenovo/Desktop/STM32H743XIH6/Project/CMakeFiles/rebuild_cache.dir

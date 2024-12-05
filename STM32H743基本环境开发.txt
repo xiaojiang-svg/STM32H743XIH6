@@ -1,0 +1,19 @@
+基于反客STM32H743XIH6核心板
+
+操作系统： 有操作系统和无操作系统各一版。建议先做一版无操作系统的。
+
+编译环境：
+ Keil5中 
+	Target选项页：	ARM Compiler: Use default compiler version6 
+			Use MicroLIB
+	C/C++(AC6)选项页： Language C: c99
+			Language C++: C++11
+			Optimization: -O0
+
+文件组织：讨论，按功能合理分类、包含关系梳理清楚，减少类似于“include in chain”之类的错误。
+
+外设及通信端口：
+优先级I： 至少4路SPI(更多SPI可以借用大LCD接口资源)，5路UART/USART(DMA收发)，至少1路IIC。6~8路PWM输出
+	小屏驱动（可借用一路SPI代码中做切换，以在必要时释放SPI资源）
+优先级II：SD卡(SDMMC)和FATFS，完成二进制读写实例 。几路PWM输入。1路CAN
+

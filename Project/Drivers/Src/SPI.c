@@ -1,0 +1,25 @@
+#include "main.h"
+
+/* 
+要求至少四路SPI，暂时先配置6路，不借用LCD接口资源
+SPI6:APB4
+SPI1\4\5:APB2
+SPI2\3:APB1
+
+SPI1:SCK(PG11),MISO(PG9),NSS(PG10),MOSI(PD7)-复用AF5
+SPI2:SCK(PB13),MISO(PB14),NSS(PB12),MOSI(PB15)-复用AF5
+SPI3:SCK(PC10),MISO(PC11),NSS(PA4),MOSI(PC12)-复用AF6
+SPI4:SCK(PE2),MISO(PE5),NSS(PE4),MOSI(PE6)-复用AF5
+SPI5:SCK(PF7),MISO(PF8),NSS(PF6),MOSI(PF9)-复用AF5
+SPI6:SCK(PG13),MISO(PG12),NSS(PG8),MOSI(PG14)-复用AF5
+ */
+void SPI_Init(void) {
+    // 关于各GPIO的时钟都在clock_manage.c中打开
+    // 关于各GPIO的复用都在GPIO_AF.c中实现
+    
+    
+    
+    
+    
+    
+}

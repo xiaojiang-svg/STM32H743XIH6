@@ -1,0 +1,6 @@
+DFP版本：3.1.x
+board选择：STM32H743XIHx-EVAL
+有关CMSIS：stm32h743xx.h，system-stm32h7xx.h，关于工具链不支持IAR，关于中断stm32h7xx-it.h
+库选择：H7系列HAL库，拉取源https://github.com/STMicroelectronics/stm32h7xx-hal-driver master分支
+编码UTF-8
+
