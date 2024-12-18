@@ -48,5 +48,5 @@ void SPI_Init(void) {
  * 
  */
 bool SPI_Stop(void) {
-  
+  return false;
 }

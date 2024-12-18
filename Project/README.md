@@ -152,7 +152,63 @@
     └── KeilProject            # Keil 项目文件
         ├── Project.uvprojx    # Keil 工程文件
         └── Project.uvoptx     # Keil 配置文件
-
+**此部分并未完完全全遵循CMSIS文件架构，特别是在keil中的文件架构与CMSIS差异很大，接下来做一个更加详细的解释**
+├─.cmsis
+│  └─include
+├─.eide
+├─.vscode
+├─Application                   # 此部分主要是上层的代码编写
+│  ├─config                     # 用作适合当前项目目标平台的配置操作
+│  ├─Interrupt                  # 实现功能性中断
+│  ├─Main                       # App实现
+│  └─Tasks                      # 操作系统任务实现
+├─Build                         # 此部分用作项目构建生成中间文件的存储
+│  └─Target 1
+│      └─.obj
+│          ├─Application
+│          │  ├─Interrupt
+│          │  └─Main
+│          ├─CMSIS
+│          │  ├─Clock
+│          │  └─Core
+│          ├─Drivers
+│          │  ├─Lib
+│          │  │  └─Src
+│          │  └─Src
+│          ├─FATFS
+│          │  └─Src
+│          ├─Lib
+│          │  └─Src
+│          ├─Middlewares
+│          │  └─FATFS
+│          │      └─Src
+│          ├─Src
+│          │  └─App
+│          └─Startup
+├─CMSIS          # 其实就是对针对硬件平台做出了编译器指定，寄存器定义，系统启动，以及适配RTOS，结合CMSIS官方给出的图，**需要注意的是，我把片上外设的寄存器定义也放在了这里面**
+│  ├─Compiler    # 这一部分主要是为了跨编译器支持，不同编译器针对不同处理器架构如armCortex-M x86_64 RISC-V等会有不同的优化，所以在跨平台的时候也能让编译器更更好优化
+│  ├─Core        # 这个文件夹里面主要包含了有关内核寄存器的定义(core_cm7.h)，MPU相关寄存器的定义(mpu_armv7.h)，启动文件，和系统初始化相关文件
+│  ├─Device      # 装链接文件，上面提到的驱动和寄存器定义分别在Driver和/CMSIS/core和CMSIS下的文件解决
+│  └─RTOS        # 后面移植RTOS
+├─DebugConfig    # 关于Debug的一些配置文件，但是我对debug还不太熟悉
+├─Docs
+├─Drivers        # 里面包含了外部库驱动和自定义驱动
+│  ├─Inc         # 自定义驱动头文件
+│  ├─Lib         # HAL库及标准外设库
+│  │  ├─hal_conf
+│  │  ├─Inc
+│  │  │  └─Legacy
+│  │  └─Src
+│  │      └─Legacy
+│  └─Src         # 包含了自定义驱动实现
+├─Listings       # 编译生成的中间文件
+├─Middlewares    # 文件系统和通信协议栈
+│  └─FATFS       # FATFS文件系统移植
+│      ├─Docs
+│      ├─Inc
+│      └─Src
+├─Scripts        # 如果只用keil或者VSCODE里面的插件，这个脚本其实基本无用，但考虑到后面的特定开发，先暂留
+└─Utilities      # 一些辅助工具，见上，暂留
 
 # 版本更新内容摘要
 **暂无更新**
