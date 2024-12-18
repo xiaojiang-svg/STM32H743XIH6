@@ -117,7 +117,7 @@ extern "C" {
 /* #define STM32H723xx */  /*!< STM32H723VGH6, STM32H723VGT6, STM32H723ZGI6,
                               STM32H723ZGT6, STM32H723VET6, STM32H723VEH6,
                               STM32H723ZET6, STM32H723ZEI6 Devices */
-#define STM32H743xx
+
 #endif
 
 /*  Tip: To avoid modifying this file each time you need to switch between these
@@ -136,7 +136,7 @@ extern "C" {
  will be based on direct access to peripherals registers
    */
 /*#define USE_HAL_DRIVER */
-#define USE_HAL_DRIVER
+
 #endif /* USE_HAL_DRIVER */
 
 /**

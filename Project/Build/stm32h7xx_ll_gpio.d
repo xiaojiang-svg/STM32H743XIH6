@@ -1,1 +1,1 @@
-./build/stm32h7xx_ll_gpio.o: Lib/Src/stm32h7xx_ll_gpio.c
+./build/stm32h7xx_ll_gpio.o: Drivers/Lib/Src/stm32h7xx_ll_gpio.c

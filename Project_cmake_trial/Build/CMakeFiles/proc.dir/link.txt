@@ -1,0 +1,3 @@
+D:\MinGW64\cmake\cmake-3.31.1-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\proc.dir/objects.a
+D:\MinGW64\bin\ar.exe qc CMakeFiles\proc.dir/objects.a @CMakeFiles\proc.dir\objects1.rsp
+D:\MinGW64\bin\gcc.exe -Wall -Wextra -O0 -g -Wl,--whole-archive CMakeFiles\proc.dir/objects.a -Wl,--no-whole-archive -o proc.exe -Wl,--out-implib,libproc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\proc.dir\linkLibs.rsp

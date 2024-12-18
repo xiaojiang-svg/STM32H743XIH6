@@ -1,0 +1,1 @@
+  -L"C:/Users/lenovo/Desktop/STM32H743XIH6/Project/usr/lib/llvm-15/lib/clang/15.0.7/include"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
